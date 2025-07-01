@@ -1,0 +1,21 @@
+# Don't format dependencies
+node_modules/
+
+# Don't format environment variables
+.env
+.env.*
+
+# Don't format build outputs
+dist/
+build/
+coverage/
+
+# Ignore editor settings
+.vscode/
+
+# Ignore logs or debug
+*.log
+
+# Ignore lock files if needed (optional)
+# package-lock.json
+# yarn.lock
