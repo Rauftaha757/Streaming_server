@@ -9,3 +9,5 @@ this.success=statusCode  < 400
 }
 
 }
+
+module.exports= ApiResponse
