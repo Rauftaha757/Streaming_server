@@ -6,7 +6,7 @@ const loginuser = async function (req, res, next) {
   try {
     const { email, username, password } = req.body;
 
-    if ([email, password, username].some((field) => !field || field.trim() === "")) {
+    if ([email, password].some((field) => !field || field.trim() === "")) {
       throw new ApiErrors(400, "Please fill required fields");
     }
 
