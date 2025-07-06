@@ -40,4 +40,8 @@ duration:{
     min:0
 },
 
-},{timestamps:true})
+},{timestamps:true});
+
+const videomodel = mongoose.model("videos",VideoSchema);
+
+module.exports=videomodel
