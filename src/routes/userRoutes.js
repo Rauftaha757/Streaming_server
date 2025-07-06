@@ -10,6 +10,8 @@ const { route } = require('../app');
 const getuser = require('../controller/Getuser');
 const updateavatar = require('../controller/updateavatar');
 const multer = require('multer');
+const getuserchannel = require('../controller/getuserprofile');
+const getUserWithVideos = require('../controller/watchhistory');
 const router = express.Router();
 
 router.route("/registeruser").post(upload.fields(
@@ -35,5 +37,7 @@ router.route("/updateavatar").post(verifyJwt,upload.fields(
             maxCount:1
         }
     ]
-),updateavatar)
+),updateavatar),
+router.route("/getuserwithsubs").post(verifyJwt,getuserchannel),
+router.route("/getuserwithvideodetails").post(verifyJwt,getUserWithVideos)
 module.exports=router
