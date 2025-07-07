@@ -10,6 +10,5 @@ app.use(express.static("public"));
 // routes
 const userRouter = require("./routes/userRoutes.js")
 app.use("/api",userRouter)
-
 module.exports = app;
 
